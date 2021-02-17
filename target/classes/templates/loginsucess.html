@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>Insurance Holder Profile</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+	
+	
+	<div class="row">
+		<h2  style="margin:20px">  LIST OF USERS</h2>
+		<div class="col-md-3">
+			<input type="text" class="form-control" placeholder="serach"/>
+		</div>
+		<div class="col-md-2">
+			<button class="btn btn-primary">serach</button> 
+		</div>
+	 <div class="col-md-7"> </div>
+	</div>
+<table class="table" style="width:100%">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Location</th>
+    <th>Company Name</th>
+    <th>Designation</th>
+    <th>Address</th>
+    <th>Date Of Birth</th>
+    <th>Sum Of Insurance Amount</th>
+   	<th>Insurance Plan</th>  
+  </tr>
+  <tr th:each="user : ${users}" >
+    <td th:text="${user.id}"></td>
+    <td th:text="${user.name}"></td>
+    <td th:text="${user.age}"></td>
+    <td th:text="${user.location}"></td>
+    <td th:text="${user.companyName}"></td>
+    <td th:text="${user.designation}"></td>
+    <td th:text="${user.address}"></td>
+    <td th:text="${user.dateOfBirth}"></td>
+    <td th:text="${user.sumOfInsuranceAmount}"></td>
+    <td th:text="${user.insurancePlan}"></td>
+  </tr>
+  
+</table>
+</body>
+</html>
